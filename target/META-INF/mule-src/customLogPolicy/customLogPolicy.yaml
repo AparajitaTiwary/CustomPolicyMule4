@@ -1,0 +1,26 @@
+id: Custom Log Policy
+name: Custom Log Policy
+description: Policy to decide when to Log
+category: Custom
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration:
+  - propertyName: logContent
+    name: Add Logging Content
+    description: If enabled, the policy logs content
+    type: boolean
+    optional: true
+    defaultValue: false
+  - propertyName: logContentCondition
+    name: Condition on which content should be logged
+    description: Dataweave expression to determine the condition for logging content
+    type: expression
+    optional: true
+    sensitive: false
+    allowMultiple: false
+    dependsOnKey: logContent
+    dependsOnValue: true
