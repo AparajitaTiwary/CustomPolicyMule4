@@ -1,1 +1,1 @@
-{"version":"1.2.0","artifactCoordinates":{"groupId":"b364c102-b968-425d-bb60-fb78bbfdbc33","artifactId":"customLogPolicy","version":"1.0.7-SNAPSHOT","type":"jar","classifier":"mule-policy"},"dependencies":[],"resources":["template.xml"]}
+{"version":"1.2.0","artifactCoordinates":{"groupId":"b364c102-b968-425d-bb60-fb78bbfdbc33","artifactId":"customLogPolicy","version":"1.0.9-SNAPSHOT","type":"jar","classifier":"mule-policy"},"dependencies":[],"resources":["template.xml"]}

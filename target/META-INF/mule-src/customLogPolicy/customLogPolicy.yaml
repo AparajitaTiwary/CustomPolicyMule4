@@ -9,18 +9,9 @@ standalone: true
 requiredCharacteristics: []
 providedCharacteristics: []
 configuration:
-  - propertyName: logContent
-    name: Add Logging Content
-    description: If enabled, the policy logs content
+  - propertyName: log4jVulnerabilityCheck
+    name: log4j Vulnerability Check
+    description: If enabled, the policy checks for Log4j vulnerability
     type: boolean
     optional: true
     defaultValue: false
-  - propertyName: logContentCondition
-    name: Condition on which content should be logged
-    description: Dataweave expression to determine the condition for logging content
-    type: expression
-    optional: true
-    sensitive: false
-    allowMultiple: false
-    dependsOnKey: logContent
-    dependsOnValue: true

@@ -12,18 +12,19 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 
     <http-policy:proxy name="{{{policyId}}}-custom-policy">
         <http-policy:source>
-			{{#if logContent}}
-			   <set-variable variableName="enableloggingContent" value="{{{logContentCondition}}}"/>
-			{{/if}}
+        			{{#if log4jVulnerabilityCheck}}
+			   
+			
 			
 			<choice>
-           <when expression= "#[vars.enableloggingContent == false]" >
-             <logger message= "#[payload]" />
+           <when expression= "#[payload matches(/.*\$(\{|%7B)[^\}]*?j.*?n.*?d.*?i.*/)]" >
+             <logger message= "Don't Log" />
+             {{/if}}
 			
           <http-policy:execute-next/>
 			</when>
 			<otherwise>
-              <logger message="Avoid logging" />
+              <logger message="#[payload]" />
            </otherwise>
            </choice>
 			
